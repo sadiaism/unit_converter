@@ -1,9 +1,9 @@
 import streamlit as st
 
-# Func
+# Function
 def distance_converter(from_unit,to_unit,value):
     units = {
-        "Meters":1,
+        "Meters": 1,
         "Kilometers":1000,
         "Feet":0.3048,
         "Miles":1609.34,
@@ -11,6 +11,7 @@ def distance_converter(from_unit,to_unit,value):
 
     result = value * units[from_unit] / units[to_unit]
     return result
+
 
 def temprature_converter(from_unit,to_unit,value):
     if from_unit == "Celsius" and to_unit == "Fahrenheit":
@@ -21,16 +22,18 @@ def temprature_converter(from_unit,to_unit,value):
         result = value
     return result
 
+
 def weight_converter(from_unit,to_unit,value):
     units = {
         "Kilograms": 1,
         "Grams":0.001,
         "Pounds":0.453592,
-        "Ounces":0.0283495,
+        "Ounces":0.0283485,
     }
 
     result = value * units[from_unit] / units[to_unit]
     return result
+
 
 def pressure_converter(from_unit,to_unit,value):
     units = {
@@ -42,9 +45,6 @@ def pressure_converter(from_unit,to_unit,value):
 
     result = value * units[from_unit] / units[to_unit]
     return result
-
-
-
 
 
 # UI
